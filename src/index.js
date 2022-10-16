@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-
+// react course on youtube time: 02.01.00
 const sendRoot = ReactDOM.createRoot(document.getElementById("root"));
 
 // const Greeting = () => {
@@ -63,7 +63,9 @@ const Image = () => (
 const Title = () => <h1>Harry Potter and the Order of the Phoenix:</h1>;
 
 const Auther = () => (
-  <h4>Mr. Jim Kay (Illustrator), Neil Packer (Illustrator)</h4>
+  <h4 style={{ color: "#617d98", fontSize: "0.75 rem", marginTop: "0.25 rem" }}>
+    Mr. Jim Kay (Illustrator), Neil Packer (Illustrator)
+  </h4>
 );
 
 BookList();
