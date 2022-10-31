@@ -1,7 +1,11 @@
+//import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
+
+import { objBooks } from "./books";
+import Book from "./Book";
 // react course on youtube time: 02.59.00
 const sendRoot = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -23,32 +27,6 @@ const sendRoot = ReactDOM.createRoot(document.getElementById("root"));
 // Greeting();
 //ReactDOM.render(<Greeting />, document.getElementById("root")); eski yöntem
 <></>;
-const objBooks = [
-  {
-    id: 1,
-    title: "Harry abi ve sirlar odasi",
-    author: "one brave lady",
-    img: "https://images-na.ssl-images-amazon.com/images/I/71tR2ZEgPYL._AC_UL210_SR195,210_.jpg",
-  },
-  {
-    id: 2,
-    title: "The Guy From Friends",
-    author: "Handsome Boi",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81ZkvDcuCzL._AC_UL210_SR195,210_.jpg",
-  },
-  {
-    id: 3,
-    title: "Diary of a Wimpy Kid Book 17",
-    author: "Diper Överlöde",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81PQlW-p8nL._AC_UL210_SR195,210_.jpg",
-  },
-  {
-    id: 4,
-    title: "Series That Fat Boi didnt finish yet",
-    author: "Fat Boi",
-    img: "https://images-na.ssl-images-amazon.com/images/I/91k-kLccE8L._AC_UL210_SR195,210_.jpg",
-  },
-];
 
 function BookList() {
   const items = (
@@ -60,16 +38,4 @@ function BookList() {
   );
   sendRoot.render(items);
 }
-
-const Book = ({ title, author, img }) => {
-  console.log({ title, author, img });
-  return (
-    <article className="book">
-      <img src={img} alt="" />
-      <h1>{title}</h1>
-      <h4>{author}</h4>
-    </article>
-  );
-};
-
 BookList();
